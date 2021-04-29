@@ -1,5 +1,11 @@
 package models
 
-class AirlineWeatherUpdate {
+case class AirlineWeatherUpdate
+(
+  cityName: String,
+  country: String,
+  temperature: Float,
+  clouds: String
+) {
 
 }
