@@ -1,10 +1,8 @@
-package models
+package models.messages
 
-case class AirlineWeatherUpdate(
+case class SasWeatherMessage(
   cityName: String,
   country: String,
   temperature: Float,
   clouds: String
-) {
-
-}
+)

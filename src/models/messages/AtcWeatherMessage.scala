@@ -1,6 +1,6 @@
-package models
+package models.messages
 
-case class AtcWeatherUpdate(
+case class AtcWeatherMessage(
   cityName: String,
   coordinates: String,
   country: String,
