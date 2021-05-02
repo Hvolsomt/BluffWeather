@@ -1,14 +1,15 @@
 package models.messages
 
 import java.time.LocalDateTime
+import java.util.Date
 
 case class AicWeatherMessage(
-  cityName: String,
-  country: String,
   temperature: Float,
-  sunrise: LocalDateTime,
-  sunset: LocalDateTime,
-  visibility: String
+  visibility: Int,
+  sunrise: Date,
+  sunset: Date,
+  country: String,
+  cityName: String
 ) {
 
 }

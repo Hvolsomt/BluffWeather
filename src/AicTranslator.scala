@@ -4,12 +4,12 @@ import models.messages.AicWeatherMessage
 class AicTranslator extends Translator[AicWeatherUpdate, AicWeatherMessage] {
   override def apply(input: AicWeatherUpdate): AicWeatherMessage = {
     AicWeatherMessage(
-      input.cityName,
-      input.country,
       input.temperature,
+      input.visibility,
       input.sunrise,
       input.sunset,
-      input.visibility
+      input.country,
+      input.cityName
     )
   }
 }

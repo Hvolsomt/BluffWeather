@@ -2,16 +2,16 @@ import models.{AtcWeatherUpdate, CanonicalWeatherUpdate}
 
 class AtcFilter extends Filter[AtcWeatherUpdate] {
   override def apply(update: CanonicalWeatherUpdate): AtcWeatherUpdate = {
-    AtcWeatherUpdate (
-      update.cityName,
-      update.coordinates,
-      update.country,
+    AtcWeatherUpdate(
+      update.coordinate,
       update.temperature,
-      update.humidity,
       update.pressure,
+      update.humidity,
+      update.visibility,
       update.wind,
       update.clouds,
-      update.visibility
+      update.country,
+      update.cityName,
     )
   }
 }

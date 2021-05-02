@@ -1,13 +1,15 @@
 package models.messages
 
+import models.{Coordinate, Wind}
+
 case class AtcWeatherMessage(
-  cityName: String,
-  coordinates: String,
-  country: String,
+  coordinates: Coordinate,
   temperature: Float,
+  pressure: Int,
   humidity: Float,
-  pressure: Float,
-  wind: Float,
-  clouds: String,
-  visibility: String
+  visibility: Int,
+  wind: Wind,
+  clouds: Int,
+  country: String,
+  cityName: String
 )

@@ -2,10 +2,12 @@ import com.rabbitmq.client.AMQP.Queue
 import com.rabbitmq.client.{Channel, ConnectionFactory}
 import models.messages.SasWeatherMessage
 import models.{AicWeatherUpdate, AirlineWeatherUpdate, AtcWeatherUpdate}
+import org.json.HTTP
 
 import scala.io.StdIn.readLine
 
-object Program {
+object Program extends App{
+
   val factory = new ConnectionFactory()
   factory.setHost("localhost")
   val connection = factory.newConnection()
@@ -18,7 +20,7 @@ object Program {
     MessageSender[AirlineWeatherUpdate](channel, "swa", new AirlineFilter, new XmlTranslator),
     MessageSender[AirlineWeatherUpdate](channel, "baw", new AirlineFilter, new XmlTranslator),
   )
-  val enricher = new Enricher
+  val enricher = Enricher("http://api.openweathermap.org/data/2.5/weather?zip=8260,dk&units=metric&appid=fb14f1139067845d2f30a3d147e7df89")
   val scheduler = Scheduler(enricher, senders)
   scheduler.start(300)
   readLine()

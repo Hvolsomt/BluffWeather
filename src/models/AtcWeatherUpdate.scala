@@ -1,13 +1,15 @@
 package models
 
+import java.util.Date
+
 case class AtcWeatherUpdate(
-  cityName: String,
-  coordinates: String,
-  country: String,
+  coordinate: Coordinate,
   temperature: Float,
+  pressure: Int,
   humidity: Float,
-  pressure: Float,
-  wind: Float,
-  clouds: String,
-  visibility: String
+  visibility: Int,
+  wind: Wind,
+  clouds: Int,
+  country: String,
+  cityName: String
 )

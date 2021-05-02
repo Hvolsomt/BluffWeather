@@ -1,13 +1,13 @@
 import models.AirlineWeatherUpdate
 import models.messages.SasWeatherMessage
 
-class SasTranslator extends Translator[AirlineWeatherUpdate, SasWeatherMessage]{
+class SasTranslator extends Translator[AirlineWeatherUpdate, SasWeatherMessage] {
   override def apply(input: AirlineWeatherUpdate): SasWeatherMessage = {
     SasWeatherMessage(
-      input.cityName,
-      input.country,
       input.temperature,
-      input.clouds
+      input.clouds,
+      input.country,
+      input.cityName
     )
   }
 }

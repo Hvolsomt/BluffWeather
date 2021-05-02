@@ -3,12 +3,12 @@ import models.{AicWeatherUpdate, CanonicalWeatherUpdate}
 class AicFilter extends Filter [AicWeatherUpdate]{
   override def apply(update: CanonicalWeatherUpdate): AicWeatherUpdate = {
     AicWeatherUpdate(
-      update.cityName,
-      update.country,
       update.temperature,
+      update.visibility,
       update.sunrise,
       update.sunset,
-      update.visibility
+      update.country,
+      update.cityName
     )
   }
 }
