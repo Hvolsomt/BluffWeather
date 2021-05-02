@@ -1,8 +1,9 @@
-package models
+package app.models
 
+import java.time.LocalDateTime
 import java.util.Date
 
-case class AtcWeatherUpdate(
+case class CanonicalWeatherUpdate(
   coordinate: Coordinate,
   temperature: Float,
   pressure: Int,
@@ -11,5 +12,9 @@ case class AtcWeatherUpdate(
   wind: Wind,
   clouds: Int,
   country: String,
+  sunrise: Date,
+  sunset: Date,
   cityName: String
-)
+) {
+
+}

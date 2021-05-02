@@ -1,5 +1,7 @@
-import models.{AicWeatherUpdate, AtcWeatherUpdate}
-import models.messages.{AicWeatherMessage, AtcWeatherMessage}
+package app
+
+import app.models.AtcWeatherUpdate
+import app.models.messages.AtcWeatherMessage
 
 class AtcTranslator extends Translator[AtcWeatherUpdate, AtcWeatherMessage] {
   override def apply(input: AtcWeatherUpdate): AtcWeatherMessage = {

@@ -1,4 +1,6 @@
-import models.{AtcWeatherUpdate, CanonicalWeatherUpdate}
+package app
+
+import app.models.{AtcWeatherUpdate, CanonicalWeatherUpdate}
 
 class AtcFilter extends Filter[AtcWeatherUpdate] {
   override def apply(update: CanonicalWeatherUpdate): AtcWeatherUpdate = {

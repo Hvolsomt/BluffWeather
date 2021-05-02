@@ -1,4 +1,6 @@
-import models.{AicWeatherUpdate, CanonicalWeatherUpdate}
+package app
+
+import app.models.{AicWeatherUpdate, CanonicalWeatherUpdate}
 
 class AicFilter extends Filter [AicWeatherUpdate]{
   override def apply(update: CanonicalWeatherUpdate): AicWeatherUpdate = {

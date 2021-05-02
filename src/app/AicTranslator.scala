@@ -1,5 +1,7 @@
-import models.AicWeatherUpdate
-import models.messages.AicWeatherMessage
+package app
+
+import app.models.AicWeatherUpdate
+import app.models.messages.AicWeatherMessage
 
 class AicTranslator extends Translator[AicWeatherUpdate, AicWeatherMessage] {
   override def apply(input: AicWeatherUpdate): AicWeatherMessage = {

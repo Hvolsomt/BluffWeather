@@ -1,7 +1,8 @@
-import models.{CanonicalWeatherUpdate, Coordinate, Wind}
+package app
+
+import app.models.{CanonicalWeatherUpdate, Coordinate, Wind}
 import org.json.JSONObject
 
-import java.time.LocalDateTime
 import java.util.Date
 
 case class Enricher(webApi: String) {

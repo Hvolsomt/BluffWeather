@@ -1,5 +1,6 @@
-import models.CanonicalWeatherUpdate
-import org.json.{HTTP, JSONObject}
+package app
+
+import org.json.JSONObject
 
 import java.net.URI
 import java.net.http.{HttpClient, HttpRequest, HttpResponse}

@@ -1,6 +1,6 @@
-package models.messages
+package app.models.messages
 
-import models.{Coordinate, Wind}
+import app.models.{Coordinate, Wind}
 
 case class AtcWeatherMessage(
   coordinates: Coordinate,

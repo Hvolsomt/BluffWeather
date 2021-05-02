@@ -1,4 +1,4 @@
-import com.rabbitmq.client.AMQP.Queue
+package app
 
 case class Scheduler (enricher: Enricher, senders: List[MessageSender[_]]) {
   def start(timeoutInSeconds: Int): Unit = {

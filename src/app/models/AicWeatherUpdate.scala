@@ -1,4 +1,4 @@
-package models
+package app.models
 
 import java.time.LocalDateTime
 import java.util.Date

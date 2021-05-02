@@ -1,4 +1,6 @@
-import models.{AirlineWeatherUpdate, CanonicalWeatherUpdate}
+package app
+
+import app.models.{AirlineWeatherUpdate, CanonicalWeatherUpdate}
 
 class AirlineFilter extends Filter[AirlineWeatherUpdate] {
   override def apply(update: CanonicalWeatherUpdate): AirlineWeatherUpdate = {
